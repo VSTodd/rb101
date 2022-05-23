@@ -1,0 +1,45 @@
+en: 
+  welcome: "Welcome to the Calculator! Please enter your name:"
+  valid_name: "Make sure to enter a valid name."
+  adding: "Adding"
+  subtracting: "Subtracting"
+  multiplying: "Multiplying"
+  dividing: "Dividing"
+  hello: "Hello there"
+  first_number: "What is your first number?"
+  second_number: "What is your second number?"
+  invalid: "Unfortunately that number is invalid"
+  num_choice: "Must choose 1, 2, 3 or 4"
+  calculating: "the two numbers...."
+  result: "The result is"
+  another?: "Do you want to perform another calculation? (Y to calculate again)"
+  thanks: "Thank you for using the calculator, good bye!"
+  operator_prompt: |
+        What operation would you like to perform?
+              1) add
+              2) subtract
+              3) multiply
+              4) divide
+
+de:
+  welcome: "Willkommen beim Rechner! Bitte geben Sie Ihren Namen ein:"
+  valid_name: "Achten Sie darauf, einen gültigen Namen einzugeben."
+  adding: "Hinzufügen"
+  subtracting: "Subtrahieren"
+  multiplying: "Multiplizieren"
+  dividing: "Teilen"
+  hello: "Hallo"
+  first_number: "Was ist deine erste Nummer?"
+  second_number: "Wie lautet Ihre zweite Zahl?"
+  invalid: "Leider ist diese Nummer ungültig"
+  num_choice: "Muss 1, 2, 3 oder 4 wählen"
+  calculating: "der beiden Zahlen ...."
+  result: "Das Ergebnis ist"
+  another?: "Möchten Sie eine weitere Berechnung durchführen? (Y nochmal rechnen)"
+  thanks: "Vielen Dank für die Verwendung des Rechners, auf Wiedersehen!"
+  operator_prompt: |
+        Welche Operation möchten Sie durchführen?
+              1) hinzufügen
+              2) abziehen
+              3) multiplizieren
+              4) teilen
