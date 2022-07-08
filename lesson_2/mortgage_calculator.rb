@@ -1,23 +1,25 @@
-# loan_amount * (interest_rate / (1 - (1 + interest_rate)**(-loan_duration)))
+def calculation(interest, duration, amount)
+  (interest / (1 - (1 + interest)**(-duration)))* amount
+end
 
 def prompt(message)
   puts ">> #{message}"
 end
 
-def valid_number?(num) # no zeroes permitted
+def valid_input_loan(num) # for validating loan amount input
   num = num.gsub(/[$%,]/, '')
   num.to_i.positive? && (num.to_i.to_s == num || num.to_f.to_s == num)
 end
 
-def valid_number2?(num) # zeroes permitted
+def valid_input_other(num) # for validating interest and loan duration inputs
   num = num.gsub(/[$%,]/, '')
-  # my solution to get my conditional expression < 80 characters
-  comparison1 = num.to_i.positive? || num.to_f == 0.0
-  comparison2 = num.to_i.to_s == num || num.to_f.to_s == num
-  comparison1 && comparison2
+  (num.to_i.positive? || num.to_f == 0.0) &&
+    (num.to_i.to_s == num || num.to_f.to_s == num)
 end
 
 prompt("Hello! Welcome to the Mortgage Calculator!")
+prompt("Note: In order to accurately calculate your monthy payment, your loan
+  amount, monthly (APR) interest rate, and loan duration are required.")
 
 loop do
   loan_amount = ""
@@ -25,7 +27,7 @@ loop do
 
   loop do
     loan_amount = gets.chomp
-    if valid_number?(loan_amount)
+    if valid_input_loan(loan_amount)
       loan_amount = loan_amount.gsub(/[$%,]/, '')
       loan_amount = loan_amount.to_f
       break
@@ -39,7 +41,7 @@ loop do
 
   loop do
     interest_rate = gets.chomp
-    if valid_number2?(interest_rate)
+    if valid_input_other(interest_rate)
       interest_rate = interest_rate.gsub(/[$%,]/, '')
       interest_rate = interest_rate.to_f
       interest_rate = (interest_rate / 1200)
@@ -57,7 +59,7 @@ loop do
 
   loop do
     years = gets.chomp
-    if valid_number2?(years)
+    if valid_input_other(years)
       years = years.gsub(/[$%,]/, '')
       years = years.to_f
       break
@@ -70,7 +72,7 @@ loop do
 
   loop do
     months = gets.chomp
-    if valid_number2?(months)
+    if valid_input_other(months)
       months = months.gsub(/[$%,]/, '')
       months = months.to_f
       break
@@ -83,8 +85,7 @@ loop do
 
   prompt("Thank you, just give me one moment...")
 
-  monthly_payment = interest_rate / (1 - (1 + interest_rate)**(-loan_duration))
-  monthly_payment *= loan_amount
+  monthly_payment = calculation(interest_rate, loan_duration, loan_amount)
   monthly_payment = monthly_payment.ceil(2)
   prompt("Your monthly payment will be $#{monthly_payment}")
   prompt("Do you want to perform another calculation? (Y to calculate again)")
