@@ -1,0 +1,21 @@
+It is a period of %{adjective} %{noun}.
+Rebel %{noun}s, striking
+from a hidden %{noun}, have %{verb}
+their first victory against
+the evil Galactic %{noun}.
+
+During the battle, Rebel
+%{noun}s managed to steal secret
+plans to the Empire's
+ultimate %{noun}, the DEATH
+STAR, a(n) %{adjective} space
+station with enough power to
+%{adverb} destroy a entire planet.
+
+Pursued by the Empire's
+sinister %{noun}, Princess
+%{noun} races home aboard her
+%{noun}, custodian of the
+stolen plans that can save
+her %{noun} and restore
+freedom to the galaxy....
